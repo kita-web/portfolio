@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+/* 変数 */
+$font: #777777;
+
+$background: #4E4D5F;
+
+$breakpoints: (
+    tab: 1024px,
+    sp:600px
+);
+
+@mixin respond-to($breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+/* 共通クラス */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    color: $font;
+    font-size: 16px;
+    position: relative;
+
+    @include respond-to(sp) {
+        font-size: 14px;
+    }
+}
+
+main {
+    width: calc(100% - 280px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+
+    @include respond-to(tab) {
+        width: calc(100% - 200px);
+    }
+
+    @include respond-to(sp) {
+        width: calc(100% - 120px);
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.tab-br {
+    display: none;
+}
+
+@include respond-to(tab) {
+    .tab-br {
+        display: block;
+    }
+}
+
+/* ヘッダークラス */
+#header {
+    background-color: $background;
+    width: 280px;
+    height: 100vh;
+    padding: 80px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+
+    @include respond-to(tab) {
+        width: 200px;
+    }
+
+    @include respond-to(sp) {
+        width: 120px;
+        padding: 40px 0;
+    }
+
+}
+
+.header-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-size: 24px;
+
+    @include respond-to(sp) {
+        font-size: 20px;
+    }
+}
+
+.header-nav {
+    margin-top: 40px;
+}
+
+.header-nav-item:first-child {
+    margin-bottom: 20px;
+}
+
+.header-nav-item a:hover {
+    opacity: 0.5;
+}
+
+/* aboutクラス */
+#about{
+    h2 {
+        font-size: 20px;
+        font-weight: 600;
+
+        @include respond-to(sp) {
+            font-size: 16px;
+        }
+    }
+
+    p{
+        font-size: 12px;
+        margin-top: 20px;
+    }
+}
+
+.about-wrapper {
+    padding: 4vw;
+    position: fixed;
+    height: 100vh;
+    width: calc((100% - 280px)*0.4);
+    top: 0;
+    left: 280px;
+
+    @include respond-to(tab) {
+        width: 100%;
+        left: 200px;
+        position: static;
+        display: block;
+        height: auto;
+        padding: 6vw 4vw;
+    }
+
+    @include respond-to(sp) {
+        padding: 8vw 4vw;
+    }
+}
+
+.skills-wrapper {
+    height: 100vh;
+    width: 60%;
+    padding: 4vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include respond-to(tab) {
+        width: 100%;
+        position: static;
+        padding: 6vw 4vw;
+        height: auto;
+    }
+
+    @include respond-to(sp) {
+        padding: 8vw 4vw;
+    }
+}
+
+.design,.coding,.other{
+    padding: 40px 0;
+}
+
+.design,.coding{
+    border-bottom: 1px solid;
+}
+
+.design{
+    padding-top: 0;
+}
