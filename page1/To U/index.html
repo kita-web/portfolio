@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- 文字コードの指定 -->
+    <meta charset="UTF-8">
+    <!-- レスポンシブ表示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- アイコン -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <!-- 検索除け -->
+    <meta name="robots" content="noindex">
+    <!-- タイトル -->
+    <title>To U</title>
+    <!-- 概要 -->
+    <meta name="description" content="サイトの概要を記入します。">
+    <!-- GoogleFonts読み込み用 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Waterfall&display=swap"
+        rel="stylesheet">
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header id="header">
+        <div class="header-wrapper">
+            <h1 class="logo"><a href="#"><img src="./img/logo.png" alt="logo"></a></h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#fv" class="nav-link">TOP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#product" class="nav-link">PRODUCT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#diagnosis" class="nav-link">パーソナライズ診断とは</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#price" class="nav-link">PRICE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><img src="./img/shop-icon.png" alt=""></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="tab-icon">
+                <div class="flex">
+                    <a href="#" class="nav-link"><img src="./img/shop-icon.png" alt=""></a>
+                    <button id="js-drawer-icon" class="drawer-icon">
+                        <span class="drawer-icon__bar"></span>
+                        <span class="drawer-icon__bar"></span>
+                        <span class="drawer-icon__bar"></span>
+                    </button>
+                    <div class="drawer" id="js-drawer">
+                        <a href="#fv" class="drawer_menu">TOP</a>
+                        <a href="#product" class="drawer_menu">PRODUCT</a>
+                        <a href="#diagnosis" class="drawer_menu">パーソナライズ診断とは</a>
+                        <a href="#price" class="drawer_menu">PRICE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ファーストビュー -->
+        <div id="fv">
+            <div class="fv-wrapper">
+                <div class="fv-text">
+                    <p class="slogan">特別なあなたへ<br>特別なスキンケアを</p>
+                    <p class="sub-slogan">一人ひとりのニーズに合わせた<br>オーダーメイドスキンケアで<br>貴女だけの美しい肌へ。</p>
+                    <p class="campaign">初回限定キャンペーン開催中</p>
+                    <a href="#" class="btn">無料パーソナライズ診断をする</a>
+                </div>
+                <div class="fv-img"><img src="./img/item-img.png" alt=""></div>
+            </div>
+        </div>
+
+        <!-- introセクション -->
+        <section id="intro">
+            <div class="intro-wrapper">
+                <h2 class="section-heading">こんな肌の悩みを<br class="sp-br">感じていませんか？</h2>
+                <ul class="check-list">
+                    <li class="checkbox">
+                        <img src="./img/check-img.png" alt="">
+                        レビューが良い化粧品でも効果を感じない
+                    </li>
+                    <li class="checkbox">
+                        <img src="./img/check-img.png" alt="">
+                        今まで使っていた化粧品が合わなくなった
+                    </li>
+                    <li class="checkbox">
+                        <img src="./img/check-img.png" alt="">
+                        使わなくなった化粧品が溜まっていく
+                    </li>
+                </ul>
+                <div class="intro-texts">
+                    <p class="intro-text">そんなあなたに</p>
+                    <p class="intro-text tab-none">あなただけのスキンケアをお届けします。</p>
+                    <div class="tab-intro-texts">
+                        <p class="intro-text">あなただけのスキンケアを</p>
+                        <p class="intro-text">お届けします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- conceptセクション -->
+        <section id="concept" class="">
+            <div class="concept-wrapper">
+                <div class="concept-text">
+                    <h2 class="section-heading">自分自身と相談しながら<br>一人ひとりに合った<br class="sp-br">スキンケア</h2>
+                    <p>パーソナライズ診断をすることで10,000通りの組み合わせから<br>あなたの肌質や好みにぴったりなスキンケアセットを提案します。</p>
+                    <a href="#" class="btn">無料パーソナライズ診断をする</a>
+                </div>
+                <div class="concept-img"><img src="./img/set-img.png" alt=""></div>
+            </div>
+        </section>
+
+        <!-- productセクション -->
+        <section id="product">
+            <div class="product-wrapper">
+                <div class="box-pink"></div>
+                <div class="product-item">
+                    <div class="product-text">
+                        <div class="product-title">
+                            <h3 class="product-title1">化粧水</h3>
+                            <p class="product-title2">Lotion</p>
+                        </div>
+                        <div class="product-detail">
+                            <p>敏感肌、脂性肌、乾燥肌等あなたの肌の性質にあった水分量と油分量のバランスを整え、保水力と免疫力もアップします。</p>
+                            <p>内容量：200ml
+                                <br>使用目安：3ヶ月
+                            </p>
+                        </div>
+                        <a href="#" class="btn">詳しく見る</a>
+                    </div>
+                    <div class="product-img"><img src="./img/lotion-img.png" alt=""></div>
+                </div>
+                <div class="box-white"></div>
+            </div>
+            <div class="product-wrapper">
+                <div class="box-white"></div>
+                <div class="product-item">
+                    <div class="product-img"><img src="./img/cream-img.png" alt=""></div>
+                    <div class="product-text">
+                        <div class="product-title">
+                            <h3 class="product-title1">美容液</h3>
+                            <p class="product-title2">Serum</p>
+                        </div>
+                        <div class="product-detail">
+                            <p>肌質に合わせた成分で、本来のしっとり柔らかな肌の再生、アンチエイジング効果もあります。</p>
+                            <p>内容量：60g
+                                <br>使用目安：3ヶ月
+                            </p>
+                        </div>
+                        <a href="#" class="btn">詳しく見る</a>
+                    </div>
+                </div>
+                <div class="box-pink"></div>
+            </div>
+            <div class="product-wrapper">
+                <div class="box-pink"></div>
+                <div class="product-item">
+                    <div class="product-text">
+                        <div class="product-title">
+                            <h3 class="product-title1">乳液</h3>
+                            <p class="product-title2">Milk lotion</p>
+                        </div>
+                        <div class="product-detail">
+                            <p>化粧水と美容クリームの後、潤いと美容成分を閉じ込めキープします。</p>
+                            <p>内容量：60g
+                                <br>使用目安：3ヶ月
+                            </p>
+                        </div>
+                        <a href="#" class="btn">詳しく見る</a>
+                    </div>
+                    <div class="product-img"><img src="./img/milk-img.png" alt=""></div>
+                </div>
+                <div class="box-white"></div>
+            </div>
+        </section>
+
+        <!-- diagnosisセクション -->
+        <section id="diagnosis">
+            <div class="diagnosis-wrapper">
+                <h2 class="section-heading">パーソナライズ診断とは</h2>
+                <div class="step-wrapper">
+                    <div class="step">
+                        <p class="step-number">01</p>
+                        <img src="./img/step1.png" alt="">
+                        <h3 class="step-title">診断を受ける</h3>
+                        <p>3分程のオンライン美容分析診断を<br>行い、あなたの肌の調子を<br>チェックします。</p>
+                    </div>
+                    <div class="step">
+                        <p class="step-number">02</p>
+                        <img src="./img/step2.png" alt="">
+                        <h3 class="step-title">セットのご提案</h3>
+                        <p>分析結果を元に、10,000通りの組み<br>合わせからあなたに最適な化粧品を<br>ご提案します。</p>
+                    </div>
+                    <div class="step">
+                        <p class="step-number">03</p>
+                        <img src="./img/step3.png" alt="">
+                        <h3 class="step-title">玄関先まで送付</h3>
+                        <p>2週間以内に玄関先または<br>郵便ボックスにスキンケアセットを<br>お届けします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- priceセクション -->
+        <section id="price">
+            <div class="price-wrapper">
+                <div class="price-box">
+                    <h3 class="price-title">初めてのお客さま<br class="sp-br">限定価格</h3>
+                    <img class="price-box-item" src="./img/item-img.png" alt="">
+                    <img class="tab-price-img" src="./img/tab-price-img.png" alt="">
+                    <div class="price-detail">
+                        <img class="price-detail-img" src="./img/price-detail-img.png" alt="">
+                        <a href="#" class="btn">無料パーソナライズ診断をする</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer id="footer">
+        <div class="footer-wrapper">
+            <h1 class="logo"><a href="#"><img src="./img/logo-white.png" alt="logo"></a></h1>
+            <div class="sns-wrapper">
+                <p>OFFICIAL</p>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><img src="./img/sns-youtube-img.png" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><img src="./img/sns-x-img.png" alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><img src="./img/sns-inst-img.png" alt=""></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <p class="footer-copy-light">&copy;2024 To U Ink</p>
+    </footer>
+
+    <!-- js読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
