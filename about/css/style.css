@@ -31,7 +31,7 @@ main {
 }
 @media (max-width: 600px) {
   main {
-    width: calc(100% - 120px);
+    width: 100%;
   }
 }
 
@@ -42,12 +42,17 @@ img {
 .tab-br {
   display: none;
 }
-
 @media (max-width: 1024px) {
   .tab-br {
     display: block;
   }
 }
+@media (max-width: 600px) {
+  .tab-br {
+    display: none;
+  }
+}
+
 /* ヘッダークラス */
 #header {
   background-color: #4E4D5F;
@@ -58,6 +63,7 @@ img {
   top: 0;
   left: 0;
   color: #fff;
+  z-index: 1;
 }
 @media (max-width: 1024px) {
   #header {
@@ -66,8 +72,11 @@ img {
 }
 @media (max-width: 600px) {
   #header {
-    width: 120px;
-    padding: 40px 0;
+    width: 100%;
+    padding: 0 20px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 
@@ -76,6 +85,21 @@ img {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .header-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .header-title {
@@ -90,9 +114,28 @@ img {
 .header-nav {
   margin-top: 40px;
 }
+@media (max-width: 600px) {
+  .header-nav {
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+  }
+}
 
 .header-nav-item:first-child {
   margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .header-nav-item:first-child {
+    margin-bottom: 0;
+  }
 }
 
 .header-nav-item a:hover {
@@ -100,6 +143,11 @@ img {
 }
 
 /* aboutクラス */
+@media (max-width: 600px) {
+  #about {
+    padding-top: 60px;
+  }
+}
 #about h2 {
   font-size: 20px;
   font-weight: 600;
