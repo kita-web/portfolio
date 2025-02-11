@@ -1,0 +1,232 @@
+@charset "UTF-8";
+
+/* 変数 */
+$font: #777777;
+
+$background: #4E4D5F;
+
+$breakpoints: (
+    tab: 1024px,
+    sp:600px
+);
+
+@mixin respond-to($breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+/* 共通クラス */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    color: $font;
+    font-size: 16px;
+    position: relative;
+
+    @include respond-to(sp) {
+        font-size: 14px;
+    }
+}
+
+main {
+    width: calc(100% - 280px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+
+    @include respond-to(tab) {
+        width: calc(100% - 200px);
+    }
+
+    @include respond-to(sp) {
+        width: calc(100% - 120px);
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.tab-br {
+    display: none;
+}
+
+@include respond-to(tab) {
+    .tab-br {
+        display: block;
+    }
+}
+
+/* ヘッダークラス */
+#header {
+    background-color: $background;
+    width: 280px;
+    height: 100vh;
+    padding: 80px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+
+    @include respond-to(tab) {
+        width: 200px;
+    }
+
+    @include respond-to(sp) {
+        width: 120px;
+        padding: 40px 0;
+    }
+
+}
+
+.header-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-size: 24px;
+
+    @include respond-to(sp) {
+        font-size: 20px;
+    }
+}
+
+.header-nav {
+    margin-top: 40px;
+}
+
+.header-nav-item:first-child {
+    margin-bottom: 20px;
+}
+
+.header-nav-item a:hover {
+    opacity: 0.5;
+}
+
+/* pageクラス */
+.page-wrapper {
+    font-size: 12px;
+    padding: 4vw;
+    position: fixed;
+    height: 100vh;
+    width: calc((100% - 280px)*0.4);
+    top: 0;
+    left: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond-to(tab) {
+        width: 100%;
+        left: 200px;
+        position: static;
+        display: block;
+        height: auto;
+        padding: 6vw 4vw;
+    }
+
+    @include respond-to(sp) {
+        padding: 8vw 4vw;
+    }
+}
+
+.page-text {
+    h2 {
+        font-size: 20px;
+        font-weight: 600;
+
+        @include respond-to(sp) {
+            font-size: 16px;
+        }
+    }
+
+    p {
+        margin-top: 20px;
+    }
+
+    a {
+        color: blue;
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: underline;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.page-tag {
+    width: fit-content;
+
+    p {
+        display: inline-block;
+        font-size: 10px;
+        border: 1px solid;
+        padding: 2px 8px;
+        border-radius: 10px;
+    }
+}
+
+.btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to(tab) {
+        margin-top: 8%;
+    }
+
+    div {
+        font-size: 16px;
+
+        &:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    }
+}
+
+.page-img {
+    width: 60%;
+    padding: 4vw 4vw 4vw 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    @include respond-to(tab) {
+        width: 100%;
+        position: static;
+        padding: 0 4vw 6vw 4vw;
+    }
+
+    @include respond-to(sp) {
+        padding: 0 4vw 8vw 4vw;
+    }
+}
+
+.lp-img {
+    width: 70%;
+    object-fit: contain;
+    object-position: top;
+}
+
+.sp-img {
+    width: 25%;
+}
