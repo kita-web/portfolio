@@ -32,7 +32,6 @@ main {
 @media (max-width: 600px) {
   main {
     width: 100%;
-    top: 60px;
   }
 }
 
@@ -144,6 +143,12 @@ img {
 }
 
 /* worksクラス */
+@media (max-width: 600px) {
+  #works {
+    padding-top: 60px;
+  }
+}
+
 .works-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
