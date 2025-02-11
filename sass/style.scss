@@ -45,7 +45,6 @@ main {
 
     @include respond-to(sp) {
         width: 100%;
-        top: 60px;
     }
 }
 
@@ -138,6 +137,12 @@ img {
 }
 
 /* worksクラス */
+#works{
+    @include respond-to(sp){
+        padding-top: 60px;
+    }
+}
+
 .works-wrapper {
     display: flex;
     flex-wrap: wrap;
