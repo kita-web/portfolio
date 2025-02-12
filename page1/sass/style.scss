@@ -37,7 +37,7 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 100%;
 
     @include respond-to(tab) {
         width: calc(100% - 200px);
