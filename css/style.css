@@ -57,7 +57,7 @@ img {
 #header {
   background-color: #4E4D5F;
   width: 280px;
-  height: 100vh;
+  height: 100%;
   padding: 80px 0;
   position: fixed;
   top: 0;
